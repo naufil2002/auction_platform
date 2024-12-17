@@ -1,4 +1,5 @@
 import { createAuction } from "@/store/slices/auctionSlice";
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import { useDispatch, useSelector } from "react-redux";
@@ -180,7 +181,11 @@ const CreateAuction = () => {
               >
                 <div class="flex flex-col items-center justify-center pt-5 pb-6">
                   {imagePreview ? (
-                    <img src={imagePreview} alt={title} className="w-44 h-auto"/>
+                    <img
+                      src={imagePreview}
+                      alt={title}
+                      className="w-44 h-auto"
+                    />
                   ) : (
                     <>
                       <svg
@@ -209,11 +214,18 @@ const CreateAuction = () => {
                     SVG, PNG, JPG or GIF (MAX. 800x400px)
                   </p>
                 </div>
-                <input id="dropzone-file" type="file" class="hidden" onChange={imageHandler}/>
+                <input
+                  id="dropzone-file"
+                  type="file"
+                  class="hidden"
+                  onChange={imageHandler}
+                />
               </label>
             </div>
           </div>
-          <button className="bg-[#D6482B] font-semibold hover:bg-[#b8381e] text-xl transition-all duration-300 py-2 px-4 rounded-md text-white w-[280px] mx-auto lg:w-[640px] my-4">{loading ? "Creating Auction..." : "Create Auction"}</button>
+          <button className="bg-[#D6482B] font-semibold hover:bg-[#b8381e] text-xl transition-all duration-300 py-2 px-4 rounded-md text-white w-[280px] mx-auto lg:w-[640px] my-4">
+            {loading ? "Creating Auction..." : "Create Auction"}
+          </button>
         </form>
       </div>
     </article>

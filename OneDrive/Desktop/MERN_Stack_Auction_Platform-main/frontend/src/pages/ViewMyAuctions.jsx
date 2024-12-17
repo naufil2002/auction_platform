@@ -1,6 +1,7 @@
 import CardTwo from "@/custom-components/CardTwo";
 import Spinner from "@/custom-components/Spinner";
 import { getMyAuctionItems } from "@/store/slices/auctionSlice";
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";

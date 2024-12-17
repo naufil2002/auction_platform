@@ -25,7 +25,7 @@ const bidSlice = createSlice({
 export const placeBid = (id, data) => async (dispatch) => {
   dispatch(bidSlice.actions.bidRequest());
   try {
-    const response = await axios.post(`https://auction-platform-1.onrender.com/api/v1/bid/place/${id}`, data, {
+    const response = await axios.post(`https://auction-platform-gjbt.onrender.com/api/v1/bid/place/${id}`, data, {
       withCredentials: true,
       headers: { "Content-Type": "application/json" },
     });
