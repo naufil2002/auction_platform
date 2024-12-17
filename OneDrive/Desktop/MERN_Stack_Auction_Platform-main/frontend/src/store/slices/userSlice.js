@@ -120,10 +120,12 @@ export const login = (data) => async (dispatch) => {
     dispatch(userSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(userSlice.actions.loginFailed());
-    toast.error(error.response.data.message);
+    const errorMessage = error.response?.data?.message || "An error occurred during login";
+    toast.error(errorMessage); // Show the error message
     dispatch(userSlice.actions.clearAllErrors());
   }
 };
+
 
 export const logout = () => async (dispatch) => {
   try {
